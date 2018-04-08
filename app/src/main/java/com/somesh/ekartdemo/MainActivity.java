@@ -32,6 +32,12 @@ public class MainActivity extends AppCompatActivity
     TextView usernameTV;
     TextView userIDTV;
 
+    List<Product> productList1= new ArrayList<>();
+    List<Product> productList2= new ArrayList<>();
+    List<Product> productList3= new ArrayList<>();
+    List<Product> productList4= new ArrayList<>();
+    List<Product> productList5= new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,11 +75,34 @@ public class MainActivity extends AppCompatActivity
         Product product1 = new Product(2,"Syringe",121.00,"It is simple medicine");
         Product product2 = new Product(3,"Tablet",22.00,"It is simple medicine");
 
+
+
+
         productList.add(product);
         productList.add(product1);
         productList.add(product2);
         mAdapter.addAll(productList);
-        
+
+
+        Product product3=new Product(4,"Endoscope",2311,"A endoscope is flexible tube attached with a light and a camera. It is equipment which is inserted into the body to give a detailed view of inner parts. It is commonly inserted into body through mouth, anus or a small surgical cut.");
+
+        Product product4=new Product(5,"CT SACN machine",234000,"Computed Tomography scan commonly known as CT scan is a large ring shaped machine. It makes use of X-Rays to generate clear and detailed pictures of inside of a human body.");
+
+        productList1.add(product3);
+        productList1.add(product4);
+        Product product5=new Product(6,"Ultrasonic stone disintegration apparatus",2300,"used to break down kidney stones into smaller fragments to allow them to pass out without the need of any surgery");
+
+        Product product6=new Product(7,"Cystoscope",21200,"an endoscope to view the urinary passage");
+        productList2.add(product5);
+        productList2.add(product6);
+        Product product7=new Product(8,"Gastroscope",21200,"an endoscope to view the urinary passage");
+        Product product8=new Product(9,"Colonoscope",21200,"an endoscope to view the urinary passage");
+        Product product9=new Product(10,"Balloon dilator",21200,"an endoscope to view the urinary passage");
+        productList3.add(product7);
+        productList3.add(product8);
+        productList3.add(product9);
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -137,11 +166,14 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_radiology) {
-
+mAdapter.clear();
+mAdapter.addAll(productList1);
         } else if (id == R.id.nav_urology) {
-
+            mAdapter.clear();
+            mAdapter.addAll(productList2);
         } else if (id == R.id.nav_gastroenterology) {
-
+            mAdapter.clear();
+            mAdapter.addAll(productList3);
         } else if (id == R.id.nav_orthopedics) {
 
         } else if (id == R.id.nav_reproductive) {

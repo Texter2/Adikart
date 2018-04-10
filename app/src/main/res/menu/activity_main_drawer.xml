@@ -16,9 +16,7 @@
         <item
             android:id="@+id/nav_orthopedics"
             android:title="Orthopedics" />
-        <item
-        android:id="@+id/nav_reproductive"
-        android:title="Reproductive Health" />
+
     </group>
 
     <item android:title="Communicate">
@@ -30,7 +28,7 @@
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="About US" />
         </menu>
     </item>
 
